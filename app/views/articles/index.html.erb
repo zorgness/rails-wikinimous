@@ -1,0 +1,16 @@
+<div class="banner">
+    <h1>Wikinimous</h1>
+    <%= link_to "New Article", "articles/new", :class => "btn btn-primary"  %>
+</div>
+
+<% @articles.each do |article| %>
+
+  <div class="container">
+
+
+    <h2><%= link_to article.title, article_path(article)%></h2>
+
+    <p><%= article.content %></p>
+  </div>
+
+<% end %>
